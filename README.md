@@ -1,68 +1,51 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Test principles
+Mount actually executes the html, css and js code like a browser would, but does so in a simulated way. It is “headless” , doesnt paint the screen.
+Mount/render is typically used for integration testing and shallow is used for unit testing.
+Sinon, mocha, chai: A lot of the functionality offered by sinon is available by default with jest so you dont need sinon. Mocha and chai are a replacement for jest.
 
-## Available Scripts
+jest.config.js - locates outside of src folder
+module.exports = {
+verbose: true,
+setupFilesAfterEnv: ["./src/setupTest.js"],
+};
+setupTest.js - locates inside of src folder
+import { configure } from "enzyme";
+import Adapter from "enzyme-adapter-react-16";
+configure({ adapter: new Adapter() });
 
-In the project directory, you can run:
+You can definitely unit test react components without shallow rendering with Jest mocking to mock out the component you dont want to test.
+Things which users of your component cannot do, so your tests shouldn't do them either:
 
-### `yarn start`
+- Include the ability to find by a component class or even its displayName (again, the user does not care what your component is called and neither should your test). Note: React Testing Library supports querying for elements in ways that encourage accessibility in your components and more maintainable tests.
+- Getting a component instance (like enzyme's instance)
+- Getting and setting a component's props (props())
+- Getting and setting a component's state (state())
+  I very rarely use snapshot testing with react and I certainly wouldn't use it with shallow. That's a recipe for implementation details. The whole snapshot is nothing but implementation details.
+  To test our state notice we are not using any function names or the names of our state variables. We are keeping with our guiding principle and not testing implementation details. Since a user will see the text (state.text) on the UI, this is how we will query the DOM nodes. We will also query the button (button label or children) this way and click it. Finally we will query the final state based on the text as well.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Testing actions and reducers is one unit test that is always necessary, one exception to the testing implementation details rule.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+function arrayify(maybeArray) {
+if (Array.isArray(maybeArray)) {
+return maybeArray
+} else if (!maybeArray) {
+return []
+} else {
+return [maybeArray]
+}
+}
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Use cases a function supports is the most important consideration we keep in mind as we write tests.
+- Key takeaway: Test use cases, not code.
+  Here are a few aspects of React that people often think about testing which results in implementation details tests. For all of these, rather than thinking about the code, think about the observable effect that code has for the end user and developer user, that's your use case, test that.
+- Lifecycle methods
+- Element event handlers
+- Internal Component State
+  Conversely, here are things that you should be testing because they concern your two users. Each of these could change the DOM, make HTTP requests, call a callback prop, or perform any other number of observable side effects which would be useful to test:
+- User interactions (using fireEvent from React Testing Library): Is the end user able to interact with the elements that the component renders?
+- Changing props (using rerender from React Testing Library): What happens when the developer user re-renders your component with new props?
+- Context changes (using rerender from React Testing Library): What happens when the developer user changes context resulting in your component re-rendering?
+- Subscription changes: What happens when an event emitter the component subscribes to changes? (Like firebase, a redux store, a router, a media query, or DOM-based subscriptions like online status)
+  Where to start?: What would be the worst thing to break in this app?
+  I'd suggest making a list of features that your application supports and prioritize them based on this criteria.
+  Once you have a few E2E tests in place, then you can start looking at writing some integration tests for some of the edge cases that you are missing in your E2E tests and unit tests for the more complex business logic that those features are using. From here it just becomes a matter of adding tests over time.
