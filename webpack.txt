@@ -115,3 +115,7 @@ module.exports = {
 };
 module.loaders
 module.loaders were deprecated since webpack 2 and are now removed in favor of module.rules.
+
+Recordar: cuando uso babel-loader agregar jsx y resolve: {
+          extensions: ['.js', '.jsx'],
+        },
