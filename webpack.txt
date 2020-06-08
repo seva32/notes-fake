@@ -119,3 +119,5 @@ module.loaders were deprecated since webpack 2 and are now removed in favor of m
 Recordar: cuando uso babel-loader agregar jsx y resolve: {
           extensions: ['.js', '.jsx'],
         },
+        
+cuando uso HMR tener el .env con production/development (para .babelrc) y el webpack.config.js mode: production.
