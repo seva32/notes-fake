@@ -53,3 +53,5 @@ return [maybeArray]
 Webpack 3 -> 5
 
 Create boilerplate for SSR, as it so hard to configure one from scratch.
+
+HMR vs rhl
