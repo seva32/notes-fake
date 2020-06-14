@@ -129,3 +129,5 @@ The runtime code detects already added CSS via <link> or <style> tag. This can b
 Loadable components forward ref error.
 
 Loadable components async error
+
+Loadable components node and web env shares same webpack config file. 
