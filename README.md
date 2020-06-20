@@ -1,5 +1,5 @@
 Test principles
-Test principles
+Eslint not working
 Mount actually executes the html, css and js code like a browser would, but does so in a simulated way. It is “headless” , doesnt paint the screen.
 Mount/render is typically used for integration testing and shallow is used for unit testing.
 Sinon, mocha, chai: A lot of the functionality offered by sinon is available by default with jest so you dont need sinon. Mocha and chai are a replacement for jest.
