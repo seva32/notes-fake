@@ -137,3 +137,5 @@ SSR and semantic ui
 Change from semantic ui to tailwind
 
 Investigar stylelint en https://styled-components.com/docs/tooling#babel-plugin
+
+Context api in ssr
