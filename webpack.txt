@@ -141,3 +141,5 @@ Investigar stylelint en https://styled-components.com/docs/tooling#babel-plugin
 Context api in ssr
 
 Test on heroku
+
+Redux persister
