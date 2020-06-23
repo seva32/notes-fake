@@ -142,4 +142,4 @@ Context api in ssr
 
 Test on heroku
 
-Redux persister
+Redux persister working
