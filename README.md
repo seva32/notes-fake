@@ -56,3 +56,5 @@ Webpack 3 -> 5
 Create boilerplate for SSR, as it so hard to configure one from scratch.
 
 Tailwind babel config trouble.
+
+ErrorBoundary
