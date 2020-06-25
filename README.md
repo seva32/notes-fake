@@ -58,3 +58,5 @@ Create boilerplate for SSR, as it so hard to configure one from scratch.
 Tailwind babel config trouble.
 
 ErrorBoundary
+
+Head (helmet)
