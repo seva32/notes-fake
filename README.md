@@ -60,3 +60,5 @@ Tailwind babel config trouble.
 ErrorBoundary
 
 Head (helmet)
+
+Google Auth
