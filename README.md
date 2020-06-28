@@ -62,3 +62,5 @@ ErrorBoundary
 Head (helmet)
 
 Google Auth, signin signout
+
+Helmet props children issue
