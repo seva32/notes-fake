@@ -66,3 +66,5 @@ Google Auth, signin signout
 Helmet props children issue
 
 ignore-loader
+
+react-loadable delay
