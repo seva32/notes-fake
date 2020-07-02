@@ -1,5 +1,5 @@
 Test principles
-Eslint not working
+
 Mount actually executes the html, css and js code like a browser would, but does so in a simulated way. It is “headless” , doesnt paint the screen.
 Mount/render is typically used for integration testing and shallow is used for unit testing.
 Sinon, mocha, chai: A lot of the functionality offered by sinon is available by default with jest so you dont need sinon. Mocha and chai are a replacement for jest.
@@ -50,10 +50,6 @@ return [maybeArray]
   Where to start?: What would be the worst thing to break in this app?
   I'd suggest making a list of features that your application supports and prioritize them based on this criteria.
   Once you have a few E2E tests in place, then you can start looking at writing some integration tests for some of the edge cases that you are missing in your E2E tests and unit tests for the more complex business logic that those features are using. From here it just becomes a matter of adding tests over time.
-
-Webpack 3 -> 5
-
-Create boilerplate for SSR, as it so hard to configure one from scratch.
 
 Tailwind babel config trouble.
 
