@@ -68,3 +68,5 @@ Helmet props children issue
 ignore-loader
 
 react-loadable delay
+
+package json script
