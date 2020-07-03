@@ -65,4 +65,4 @@ ignore-loader
 
 react-loadable delay
 
-package json script
+styled-components semantic-ui-react
