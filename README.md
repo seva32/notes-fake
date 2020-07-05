@@ -67,4 +67,4 @@ react-loadable delay
 
 styled-components semantic-ui-react
 
-abort
+storybook
