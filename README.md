@@ -68,3 +68,5 @@ react-loadable delay
 styled-components semantic-ui-react
 
 storybook
+
+change to code spliting with webpack
