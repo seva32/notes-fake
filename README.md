@@ -27,13 +27,13 @@ Things which users of your component cannot do, so your tests shouldn't do them 
 Testing actions and reducers is one unit test that is always necessary, one exception to the testing implementation details rule.
 
 function arrayify(maybeArray) {
-if (Array.isArray(maybeArray)) {
-return maybeArray
-} else if (!maybeArray) {
-return []
-} else {
-return [maybeArray]
-}
+  if (Array.isArray(maybeArray)) {
+    return maybeArray
+  } else if (!maybeArray) {
+    return []
+  } else {
+    return [maybeArray]
+  }
 }
 
 - Use cases a function supports is the most important consideration we keep in mind as we write tests.
@@ -52,3 +52,4 @@ return [maybeArray]
   Once you have a few E2E tests in place, then you can start looking at writing some integration tests for some of the edge cases that you are missing in your E2E tests and unit tests for the more complex business logic that those features are using. From here it just becomes a matter of adding tests over time.
 
 redux-first-router
+semantic-ui
