@@ -54,3 +54,4 @@ function arrayify(maybeArray) {
 redux-first-router
 redux-persist
 express-session
+auth0
