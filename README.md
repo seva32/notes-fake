@@ -55,3 +55,4 @@ redux-first-router
 redux-persist
 express-session
 auth0
+passport
