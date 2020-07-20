@@ -57,3 +57,4 @@ express-session
 auth0
 passport
 axios
+jwt
