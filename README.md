@@ -56,3 +56,4 @@ redux-persist
 express-session
 auth0
 passport
+axios
