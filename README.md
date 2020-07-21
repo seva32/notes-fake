@@ -58,3 +58,4 @@ auth0
 passport
 axios
 jwt
+cookie
