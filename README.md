@@ -60,3 +60,4 @@ axios
 jwt
 cookie
 graphql
+csurf
