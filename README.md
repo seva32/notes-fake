@@ -59,3 +59,4 @@ passport
 axios
 jwt
 cookie
+graphql
