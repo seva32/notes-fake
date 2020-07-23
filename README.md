@@ -61,3 +61,4 @@ jwt
 cookie
 graphql
 csurf
+jwt refreshtoken
