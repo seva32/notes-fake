@@ -62,3 +62,4 @@ cookie
 graphql
 csurf
 jwt refreshtoken
+interceptor
