@@ -65,3 +65,4 @@ jwt refreshtoken
 interceptor
 session timeout
 update auth state
+global ajax
