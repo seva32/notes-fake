@@ -66,3 +66,4 @@ interceptor
 session timeout
 update auth state
 global ajax
+redirect user based on cookie
