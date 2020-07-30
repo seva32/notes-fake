@@ -67,3 +67,4 @@ session timeout
 update auth state
 global ajax
 jwt middleware
+service-worker
