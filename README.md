@@ -68,3 +68,4 @@ update auth state
 global ajax
 jwt middleware
 service-worker
+fetchData from api
