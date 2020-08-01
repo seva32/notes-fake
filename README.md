@@ -69,3 +69,4 @@ global ajax
 jwt middleware
 service-worker
 fetchData from api
+google auth in prod
