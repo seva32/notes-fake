@@ -71,3 +71,4 @@ service-worker
 fetchData from api
 google auth in prod
 heroku express config
+axios config
