@@ -74,3 +74,4 @@ heroku express config
 axios config
 signed cookies
 cors new config
+firestore
