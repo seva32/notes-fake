@@ -75,3 +75,4 @@ axios config
 signed cookies
 cors new config
 firestore
+passenger server
