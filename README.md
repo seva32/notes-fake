@@ -77,3 +77,4 @@ cors new config
 firestore
 passenger server
 helmet
+CSP
