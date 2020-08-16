@@ -82,3 +82,4 @@ change password
 modal
 ratelimit
 validator
+dompurify
