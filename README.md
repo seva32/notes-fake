@@ -53,3 +53,4 @@ function arrayify(maybeArray) {
 ecommerce
 paypal
 co
+braintree
