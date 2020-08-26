@@ -53,3 +53,4 @@ function arrayify(maybeArray) {
 co.js
 braintree
 classnames
+paypal
