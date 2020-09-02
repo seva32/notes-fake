@@ -53,4 +53,4 @@ function arrayify(maybeArray) {
 co.js
 classnames
 axios connection error
-tailwinds
+tailwinds theme
