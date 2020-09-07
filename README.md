@@ -54,4 +54,3 @@ co.js
 classnames
 animejs
 gsap
-animations tailwind
