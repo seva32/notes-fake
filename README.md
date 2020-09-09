@@ -54,4 +54,4 @@ co.js
 classnames
 animejs
 gsap
-slide
+
