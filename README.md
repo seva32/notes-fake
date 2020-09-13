@@ -55,5 +55,3 @@ classnames
 animejs
 gsap
 laxjs
-toggle button backdrop
-fontsize
