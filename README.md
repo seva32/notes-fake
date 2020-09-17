@@ -55,3 +55,4 @@ classnames
 animejs
 gsap
 laxjs
+aria
