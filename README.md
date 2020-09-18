@@ -56,3 +56,4 @@ animejs
 gsap
 laxjs
 aria
+profile screen
