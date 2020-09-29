@@ -52,3 +52,4 @@ function arrayify(maybeArray) {
   Once you have a few E2E tests in place, then you can start looking at writing some integration tests for some of the edge cases that you are missing in your E2E tests and unit tests for the more complex business logic that those features are using. From here it just becomes a matter of adding tests over time.
 Ai
 svg or icon
+ssr prefetch
