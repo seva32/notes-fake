@@ -55,3 +55,4 @@ svg or icon
 slider animejs
 jsfiddle.net
 pm2
+python
