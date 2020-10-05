@@ -56,3 +56,4 @@ slider animejs
 jsfiddle.net
 pm2
 python
+zoom product
