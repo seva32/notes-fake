@@ -53,3 +53,4 @@ function arrayify(maybeArray) {
   cart
 store
 cloudinary
+paypal
