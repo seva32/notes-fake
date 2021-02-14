@@ -1,4 +1,4 @@
-Stash
+Ruby
 
 Test principles first
 
