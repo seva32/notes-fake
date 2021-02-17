@@ -1,4 +1,4 @@
-Ruby WTF
+Ruby controllers
 
 Test principles first
 
