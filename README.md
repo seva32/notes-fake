@@ -1,4 +1,4 @@
-Rajnish
+
 
 Test principles first
 
