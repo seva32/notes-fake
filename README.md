@@ -1,4 +1,4 @@
-
+DRY
 
 Test principles first
 
