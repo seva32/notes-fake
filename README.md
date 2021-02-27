@@ -1,4 +1,4 @@
-DRY
+Ok 
 
 Test principles first
 
