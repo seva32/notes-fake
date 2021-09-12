@@ -1,4 +1,5 @@
-svfchat
+svfchat update
+
 ## Test principle first 1st
 
 Mount actually executes the html, css and js code like a browser would, but does so in a simulated way. It is “headless” , doesnt paint the screen.
@@ -10,8 +11,8 @@ jest.config.js - locates outside of src folder
 
 ```javascript
 module.exports = {
-verbose: true,
-setupFilesAfterEnv: ["./src/setupTest.js"],
+  verbose: true,
+  setupFilesAfterEnv: ["./src/setupTest.js"],
 };
 ```
 
@@ -40,11 +41,11 @@ Testing actions and reducers is one unit test that is always necessary, one exce
 ```javascript
 function arrayify(maybeArray) {
   if (Array.isArray(maybeArray)) {
-    return maybeArray
+    return maybeArray;
   } else if (!maybeArray) {
-    return []
+    return [];
   } else {
-    return [maybeArray]
+    return [maybeArray];
   }
 }
 ```
