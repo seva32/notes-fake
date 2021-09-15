@@ -1,4 +1,4 @@
-svfchat updat
+svfchat up
 
 ## Test principle first 1st
 
