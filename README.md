@@ -1,4 +1,4 @@
-Analytics Segment tableau
+Analytics Segment
 ## Test principle first 1st
 
 Mount actually executes the html, css and js code like a browser would, but does so in a simulated way. It is “headless” , doesnt paint the screen.
